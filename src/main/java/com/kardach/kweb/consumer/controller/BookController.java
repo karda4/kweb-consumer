@@ -23,6 +23,11 @@ public class BookController {
 		return bookService.findAll();
 	}
 	
+	@Get(value="/{id}")
+	public List<Book> findById(Long id) {
+		return bookService.findAll();
+	}
+	
 	@Post
 	public long insert(Book book) {
 		return bookService.insert(book);
@@ -34,7 +39,7 @@ public class BookController {
 	}
 	
 	@Delete("/{id}")
-	public long delete(long id) {
+	public long delete(Long id) {
 		return bookService.delete(id);
 	}
 }
